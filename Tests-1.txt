@@ -1,0 +1,58 @@
+--COUNTPOSITIVE--
+
+1. la sentencia if(x[i] >= 0) cuenta el 0 como positivo
+
+2. Si metemos una lista nula, x.length eleva la excepcion NullPointerException
+
+3. Si metemos un array sin ceros, esa condición no falla pero se ejecutará
+
+4. El error de este programa ocurre cuando hay un 0. Si hay un 0 siempre va a fallar, no hay posibilidad de que salga bien
+
+5. --
+
+6. Cambiamos la condición del if
+	if (x[i] > 0)
+
+
+--LASTZERO--
+
+1. Si hay mas de 1 cero, solo da la posición del primero. El fallo lo causa el for
+
+2. Para no llegar al for, pasamos una lista vacia que eleve la excepcion NullPointerException
+
+3. metemos una lista solo con 1 elemento, sea 0 o no
+
+4. SI el array solo tiene un 0, el valor de la posición es correcto.
+
+5. La variable i estará mal, pero no fallará
+
+6. Cambiamos el orden de ejecución del for
+
+--FINDLAST--
+
+1. No llega a la posición 0, ya que el bucle for va hasta i > 0
+
+2. NO se puede proponer código que no ejecute el fallo, porque el array siempre va a ir hasta su ultima posicion
+
+3. Si metes un array (4 5 6) y buscas cualquier numero que no esté en la primera posición, por ejemplo 5 o 6
+
+4. Si el numero que buscas está en la primera posición, simepre va a haber fallo del programa
+
+5. --
+
+6. Corregimos la condición de fin del for
+     for (int i=x.length-1; i >=0; i--)
+
+--ODDORPOS--
+
+1. El fallo esq los negativos impares devuelven resto -1. no se les tiene en cuenta
+
+2. Si la lista esta vacia, no se ejecuta el if que da el fallo porque salta la excepcion NullPointerException
+
+3. Meter un array que no tenga negativos 
+
+4.No se puede porque si hay un impar negativo no lo cuenta.
+
+5. --
+
+6. Cambiamos la condición del if para que x[i]%%2 == -1 sea true y se incremente el count
